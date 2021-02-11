@@ -92,6 +92,21 @@ export default function Search(props) {
             <MenuItem value="All">
               All
             </MenuItem>
+            <MenuItem value="All">
+              Category 1
+            </MenuItem>
+            <MenuItem value="All">
+              Category 2
+            </MenuItem>
+            <MenuItem value="All">
+              Category 3
+            </MenuItem>
+            <MenuItem value="All">
+              Category 4
+            </MenuItem>
+            <MenuItem value="All">
+              Category 5
+            </MenuItem>
             { props.categories.map(option => (
               <MenuItem key={option} value={option}>
                 {option}

@@ -27,7 +27,7 @@ const Menu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        MERN Marketplace
+        Local Marketplace
       </Typography>
       <div>
         <Link to="/">
@@ -38,9 +38,9 @@ const Menu = withRouter(({history}) => (
         <Link to="/shops/all">
           <Button style={isActive(history, "/shops/all")}>All Shops</Button>
         </Link>
-        <Link to="/auctions/all">
+        {/* <Link to="/auctions/all">
           <Button style={isActive(history, "/auctions/all")}>All Auctions</Button>
-        </Link>
+        </Link> */}
         <Link to="/cart">
           <Button style={isActive(history, "/cart")}>
             Cart
