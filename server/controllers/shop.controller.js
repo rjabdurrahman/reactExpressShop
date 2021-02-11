@@ -103,14 +103,15 @@ const remove = async (req, res) => {
 }
 
 const list = async (req, res) => {
-  try {
-    let shops = await Shop.find()
-    res.json(shops)
-  } catch (err){
-    return res.status(400).json({
-      error: errorHandler.getErrorMessage(err)
-    })
-  }
+  res.send(require('./shops.json'));
+  // try {
+  //   let shops = await Shop.find()
+  //   res.json(shops)
+  // } catch (err){
+  //   return res.status(400).json({
+  //     error: errorHandler.getErrorMessage(err)
+  //   })
+  // }
 }
 
 const listByOwner = async (req, res) => {

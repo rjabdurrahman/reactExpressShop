@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import {list} from './api-shop.js'
 import {Link} from 'react-router-dom'
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({

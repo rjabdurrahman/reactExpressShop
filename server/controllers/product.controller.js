@@ -3,7 +3,6 @@ import extend from 'lodash/extend'
 import errorHandler from './../helpers/dbErrorHandler'
 import formidable from 'formidable'
 import fs from 'fs'
-import defaultImage from './../../client/assets/images/default.png'
 
 const create = (req, res, next) => {
   let form = new formidable.IncomingForm()
@@ -55,7 +54,7 @@ const photo = (req, res, next) => {
   next()
 }
 const defaultPhoto = (req, res) => {
-  return res.sendFile(process.cwd()+defaultImage)
+  return res.sendFile(process.cwd() + '/default.png')
 }
 
 const read = (req, res) => {
@@ -148,19 +147,20 @@ const listCategories = async (req, res) => {
 }
 
 const list = async (req, res) => {
-  const query = {}
-  if(req.query.search)
-    query.name = {'$regex': req.query.search, '$options': "i"}
-  if(req.query.category && req.query.category != 'All')
-    query.category =  req.query.category
-  try {
-    let products = await Product.find(query).populate('shop', '_id name').select('-image').exec()
-    res.json(products)
-  } catch (err){
-    return res.status(400).json({
-      error: errorHandler.getErrorMessage(err)
-    })
-  }
+  res.send(require('./products.json'));
+  // const query = {}
+  // if(req.query.search)
+  //   query.name = {'$regex': req.query.search, '$options': "i"}
+  // if(req.query.category && req.query.category != 'All')
+  //   query.category =  req.query.category
+  // try {
+  //   let products = await Product.find(query).populate('shop', '_id name').select('-image').exec()
+  //   res.json(products)
+  // } catch (err){
+  //   return res.status(400).json({
+  //     error: errorHandler.getErrorMessage(err)
+  //   })
+  // }
 }
 
 const decreaseQuantity = async (req, res, next) => {

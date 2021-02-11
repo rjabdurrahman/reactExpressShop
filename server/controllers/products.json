@@ -1,0 +1,61 @@
+[
+    {
+        "_id": "w39394294234",
+        "name": "HP X360 G2 Laptop",
+          "image": "https://i.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8",
+          "description": "A best laptop",
+          "category": "A",
+          "quantity": 10,
+          "price": 12000,
+          "shop": "BC Store"
+    },
+    {
+        "_id": "w39394294231",
+        "name": "Samsung Mobile",
+          "image": null,
+          "description": "A best mobile",
+          "category": "A",
+          "quantity": 10,
+          "price": 2400,
+          "shop": "BC Store"
+    },
+    {
+        "_id": "w39394294232",
+        "name": "Oven Machine",
+          "image": null,
+          "description": "A best oven",
+          "category": "A",
+          "quantity": 10,
+          "price": 30000,
+          "shop": "BC Store"
+    },
+    {
+        "_id": "w39394294233",
+        "name": "Condenser Microphone",
+          "image": null,
+          "description": "A best mobile",
+          "category": "A",
+          "quantity": 10,
+          "price": 900,
+          "shop": "BC Store"
+    },
+    {
+        "name": "Wall Decorator",
+          "image": null,
+          "description": "A best mobile",
+          "category": "A",
+          "quantity": 10,
+          "price": 300,
+          "shop": "BC Store"
+    },
+    {
+        "_id": "w39394294236",
+        "name": "Apple iPod",
+          "image": null,
+          "description": "A best mobile",
+          "category": "A",
+          "quantity": 10,
+          "price": 500,
+          "shop": "BC Store"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Digital Zone",
+        "description": "A digital shop for mobile accessroies",
+        "image": null,
+        "owner": "6024cb540818162e948cdf1b"
+    },
+    {
+        "name": "A to Z Store",
+        "description": "A store for all kinds of products",
+        "image": null,
+        "owner": "6024cb540818162e948cdf1b"
+    },
+    {
+        "name": "Kids Plus",
+        "description": "Kids products store",
+        "image": null,
+        "owner": "6024cb540818162e948cdf1b"
+    }
+]
