@@ -2,7 +2,10 @@ import Product from '../models/product.model'
 import extend from 'lodash/extend'
 import errorHandler from './../helpers/dbErrorHandler'
 import formidable from 'formidable'
-import fs from 'fs'
+import fs from 'fs';
+
+
+let demoProducts = require('./products.json');
 
 const create = (req, res, next) => {
   let form = new formidable.IncomingForm()
@@ -31,19 +34,22 @@ const create = (req, res, next) => {
 }
 
 const productByID = async (req, res, next, id) => {
-  try {
-    let product = await Product.findById(id).populate('shop', '_id name').exec()
-    if (!product)
-      return res.status('400').json({
-        error: "Product not found"
-      })
-    req.product = product
-    next()
-  } catch (err) {
-    return res.status('400').json({
-      error: "Could not retrieve product"
-    })
-  }
+  res.send(
+    demoProducts.find(x => x._id == id)
+  );
+  // try {
+  //   let product = await Product.findById(id).populate('shop', '_id name').exec()
+  //   if (!product)
+  //     return res.status('400').json({
+  //       error: "Product not found"
+  //     })
+  //   req.product = product
+  //   next()
+  // } catch (err) {
+  //   return res.status('400').json({
+  //     error: "Could not retrieve product"
+  //   })
+  // }
 }
 
 const photo = (req, res, next) => {
@@ -147,7 +153,7 @@ const listCategories = async (req, res) => {
 }
 
 const list = async (req, res) => {
-  res.send(require('./products.json'));
+  res.send(demoProducts);
   // const query = {}
   // if(req.query.search)
   //   query.name = {'$regex': req.query.search, '$options': "i"}
